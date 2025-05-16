@@ -1,13 +1,5 @@
-import { useState } from "react";
-
-const initialGameboard = [
-  [null, null, null],
-  [null, null, null],
-  [null, null, null],
-];
-
-export default function GameBoard({ onSelectCell, activePlayerSymbol }) {
-  const [gameBoard, setGameBoard] = useState(initialGameboard);
+export default function GameBoard({ onSelectCell, board }) {
+  /*  const [gameBoard, setGameBoard] = useState(initialGameboard);
 
   function handleSelectedCell(rowIndex, colIndex) {
     setGameBoard((previousGameBoard) => {
@@ -19,16 +11,19 @@ export default function GameBoard({ onSelectCell, activePlayerSymbol }) {
     });
 
     onSelectCell();
-  }
+  } */
 
   return (
     <ol id="game-board">
-      {gameBoard.map((row, rowIndex) => (
+      {board.map((row, rowIndex) => (
         <li key={rowIndex}>
           <ol>
             {row.map((playerSymbol, colIndex) => (
               <li key={colIndex}>
-                <button onClick={() => handleSelectedCell(rowIndex, colIndex)}>
+                <button
+                  onClick={() => onSelectCell(rowIndex, colIndex)}
+                  disabled={playerSymbol !== null}
+                >
                   {playerSymbol}
                 </button>
               </li>
