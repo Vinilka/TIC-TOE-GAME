@@ -18,7 +18,7 @@ A classic Tic-Tac-Toe game built with **React**. Play against a friend in the br
 
 ---
 
-## 🖥️ Local Setup
+## 🚀 Run Locally
 
 To run the project on your machine:
 
@@ -27,14 +27,8 @@ To run the project on your machine:
 ```bash
 git clone https://github.com/Vinilka/TIC-TOE-GAME.git
 cd TIC-TOE-GAME
-
-### 2. Install dependencies
-
-```npm install
-
-### 2. Start the development server
-
-```npm run dev
+npm install
+npm run dev
 
 The app will be running at http://localhost:5173
 
