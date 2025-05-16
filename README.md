@@ -29,6 +29,7 @@ git clone https://github.com/Vinilka/TIC-TOE-GAME.git
 cd TIC-TOE-GAME
 npm install
 npm run dev
+``` 
 
 The app will be running at http://localhost:5173
 
